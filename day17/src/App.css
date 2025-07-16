@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+
+  max-width: 600px; /* 최대 넓이 600px 제한 */
+  width: 100%;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+}
+
+.App > section {
+  padding: 20px 10px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 5px;
+}

@@ -1,0 +1,11 @@
+.ContactList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.ContactList .title {
+    font-size: 15px;
+    font-weight: bold;
+  }

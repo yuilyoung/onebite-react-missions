@@ -3,6 +3,7 @@ import ContactItem from "./ContactItem";
 import { memo } from "react"
 
 const ContactList = ({contacts, onDelete}) => {
+    console.log("ContactList");
     return (
         <div className="ContactList">
         <div className="title">Contact List</div>
@@ -16,4 +17,4 @@ const ContactList = ({contacts, onDelete}) => {
     )
 }
 
-export default memo(ContactList);
+export default ContactList;

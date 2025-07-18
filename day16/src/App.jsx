@@ -36,7 +36,7 @@ function App() {
   const [contacts, dispacth] = useReducer(reducer, mokdata);
   const idRef= useRef(3);
 
-  const onCreate = useCallback((contact) => {
+  const onCreate = (contact) => {
     dispacth({
       type: "CREATE",
       data: {
@@ -45,7 +45,7 @@ function App() {
         email: contact.email,
       }
     })
-  }, []);
+  };
 
   const onDelete = useCallback((targetId) => {
     dispacth({
@@ -53,6 +53,8 @@ function App() {
       targetId: targetId,
     })
   }, []);
+
+  console.log("App");
 
   return (
     <div className="App">

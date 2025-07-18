@@ -11,7 +11,9 @@ const ContactEditor = ({onCreate}) => {
     const nameRef = useRef();
     const emailRef = useRef();
 
+    console.log("ContactEditor");
      const onChange = (e) => {
+        console.log("onChange");
         setContact({
             ...contact,
             [e.target.name] : e.target.value,
@@ -67,4 +69,4 @@ const ContactEditor = ({onCreate}) => {
     )
 }
 
-export default memo(ContactEditor);
+export default ContactEditor;

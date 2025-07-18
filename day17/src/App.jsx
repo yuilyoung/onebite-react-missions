@@ -39,7 +39,7 @@ function App() {
   const [contacts, dispacth] = useReducer(reducer, mokdata);
   const idRef= useRef(3);
 
-  const onCreate = useCallback((contact) => {
+  const onCreate = (contact) => {
     dispacth({
       type: "CREATE",
       data: {
@@ -48,14 +48,14 @@ function App() {
         email: contact.email,
       }
     })
-  }, []);
+  };
 
-  const onDelete = useCallback((targetId) => {
+  const onDelete = (targetId) => {
     dispacth({
       type: "DELETE",
       targetId: targetId,
     })
-  }, []);
+  }
 
 
   const memoizedDispatch = useMemo(() => {
